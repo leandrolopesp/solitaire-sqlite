@@ -50,8 +50,10 @@ solitaire-sqlite
 │   └── install.sql           # Initial migration script for setting up the database
 ├── example
 │   └── game.db               # Example database with a game in progress
-├── LICENSE                   # Licensing information for the project
 ├── how_to_play.md            # Game instructions
+├── CHANGELOG.md
+├── COPYING
+├── LICENSE                   # Licensing information for the project
 └── README.md                 # Documentation for the project
 ```
 
@@ -63,14 +65,15 @@ The project requires SQLite and optionally AutoHotKey (Windows only)
 
 If you already has SQLite, run
 
+CMD
 ``` bash
    sqlite3 Solitaire.db < src/install/install.sql
 ```
 
+PowerShell
 ``` powershell
 sqlite3 Solitaire.db ".read src/install/install.sql"
 ```
-
 
 ### SQLite
 
@@ -153,7 +156,7 @@ Or download from [AutoHotkey's website](https://www.autohotkey.com/)
 1. **Clone Repository**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/leandrolopesp/solitaire-sqlite
 cd solitaire-sqlite
 ```
 
@@ -180,7 +183,7 @@ Or run individually:
 ## Playing the Game
 
 - To start a new game: `insert into moves(action) values('new');` (or type "nw" with AutoHotkey)
-- To view the board: `select * from game_view;`
+- To view the game board: `select * from game_view;`
 - Choose your preferred display mode:
 
 ```shell
@@ -221,7 +224,3 @@ You are free to:
 Under the following terms:
 - **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
 - **NonCommercial** — You may not use the material for commercial purposes.
-
-## Documentation
-- [Game Rules](how_to_play.md)
-- [Project Motivation](ABOUT.md)

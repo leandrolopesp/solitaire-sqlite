@@ -27,7 +27,7 @@ WITH
 
     -- Create cards with suits and values, already shuffled
     Cards AS (
-        SELECT  Suit, 
+        SELECT  Suit,
                 Value Rank,
                 ROW_NUMBER() OVER (ORDER BY random()) AS SortOrder -- Generates random ordering for cards
         FROM    Seq, Suits -- Cross Join, combines all values with all suits
