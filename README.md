@@ -67,7 +67,7 @@ If you already has SQLite, run
 
 CMD
 ``` bash
-   sqlite3 Solitaire.db < src/install/install.sql
+sqlite3 Solitaire.db < src/install/install.sql
 ```
 
 PowerShell
